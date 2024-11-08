@@ -1,0 +1,9 @@
+[submodule "adog_legged_interfaces"]
+	path = adog_legged_interfaces
+	url = https://github.com/Dyyt587/adog_legged_interfaces.git
+[submodule "adog_legged_hardware_interface"]
+	path = adog_legged_hardware_interface
+	url = https://github.com/Dyyt587/adog_legged_hardware_interface.git
+[submodule "adog_legged_controller"]
+	path = adog_legged_controller
+	url = https://github.com/Dyyt587/adog_legged_controller
