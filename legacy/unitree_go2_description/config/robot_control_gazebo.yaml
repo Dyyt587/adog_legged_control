@@ -105,7 +105,7 @@ ocs2_quadruped_controller:
       - RR_calf_joint
 
     command_interfaces:
-      - effort
+      - effort #for gazebo
       # - position
       # - velocity
       # - kp
