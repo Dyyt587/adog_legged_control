@@ -7,3 +7,12 @@
 [submodule "adog_legged_controller"]
 	path = adog_legged_controller
 	url = https://github.com/Dyyt587/adog_legged_controller
+[submodule "quadruped_ros2_control"]
+	path = quadruped_ros2_control
+	url = https://github.com/legubiao/quadruped_ros2_control.git
+[submodule "ocs2_ros2"]
+	path = ocs2_ros2
+	url = https://github.com/legubiao/ocs2_ros2.git
+[submodule "OrbbecSDK_ROS2"]
+	path = OrbbecSDK_ROS2
+	url = https://github.com/orbbec/OrbbecSDK_ROS2.git

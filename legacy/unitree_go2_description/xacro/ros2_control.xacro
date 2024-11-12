@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <xacro:arg name="IS_USING_GAZEBO" default="true"/>
+
+    <xacro:macro name="joint_interface" params="name">
+        <joint name="${name}">
+            <command_interface name="effort"/>
+            <command_interface name="velocity"/>
+            <command_interface name="position"/>
+            <command_interface name="kp"/>
+            <command_interface name="kd"/>
+
+            <state_interface name="position" initial_value="-0.2"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort" initial_value="0.0"/>
+        </joint>
+    </xacro:macro>
+
+    <ros2_control name="LegSystemHardware" type="system">
+        <xacro:if value="$(arg IS_USING_GAZEBO)">
+            <hardware>
+                <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+            </hardware>
+        </xacro:if>
+        <xacro:unless value="$(arg IS_USING_GAZEBO)">
+            <hardware>
+                <plugin>adog_leg_hardware/LegSystemHardware</plugin>
+            </hardware>
+        </xacro:unless>
+        <xacro:joint_interface name="FL_hip_joint" />
+        <xacro:joint_interface name="FL_thigh_joint" />
+        <xacro:joint_interface name="FL_calf_joint" />
+
+        <xacro:joint_interface name="FR_hip_joint" />
+        <xacro:joint_interface name="FR_thigh_joint" />
+        <xacro:joint_interface name="FR_calf_joint" />
+
+        <xacro:joint_interface name="RL_hip_joint" />
+        <xacro:joint_interface name="RL_thigh_joint" />
+        <xacro:joint_interface name="RL_calf_joint" />
+
+        <xacro:joint_interface name="RR_hip_joint" />
+        <xacro:joint_interface name="RR_thigh_joint" />
+        <xacro:joint_interface name="RR_calf_joint" />
+        <sensor name="imu_sensor">
+            <state_interface name="orientation.x"/>
+            <state_interface name="orientation.y"/>
+            <state_interface name="orientation.z"/>
+            <state_interface name="orientation.w"/>
+            <state_interface name="angular_velocity.x"/>
+            <state_interface name="angular_velocity.y"/>
+            <state_interface name="angular_velocity.z"/>
+            <state_interface name="linear_acceleration.x"/>
+            <state_interface name="linear_acceleration.y"/>
+            <state_interface name="linear_acceleration.z"/>
+        </sensor>
+
+        <sensor name="fl_ft_sensor">
+          <state_interface name="force.x" />
+          <state_interface name="force.y" />
+          <state_interface name="force.z" />
+          <state_interface name="torque.x" />
+          <state_interface name="torque.y" />
+          <state_interface name="torque.z" />
+          <param name="frame_id">FL_foot</param>
+          <param name="fx_range">100</param>
+          <param name="fy_range">100</param>
+          <param name="fz_range">100</param>
+          <param name="tx_range">15</param>
+          <param name="ty_range">15</param>
+          <param name="tz_range">15</param>
+        </sensor>
+        <sensor name="fr_ft_sensor">
+          <state_interface name="force.x" />
+          <state_interface name="force.y" />
+          <state_interface name="force.z" />
+          <state_interface name="torque.x" />
+          <state_interface name="torque.y" />
+          <state_interface name="torque.z" />
+          <param name="frame_id">FR_foot</param>
+          <param name="fx_range">100</param>
+          <param name="fy_range">100</param>
+          <param name="fz_range">100</param>
+          <param name="tx_range">15</param>
+          <param name="ty_range">15</param>
+          <param name="tz_range">15</param>
+        </sensor>
+        <sensor name="rl_ft_sensor">
+          <state_interface name="force.x" />
+          <state_interface name="force.y" />
+          <state_interface name="force.z" />
+          <state_interface name="torque.x" />
+          <state_interface name="torque.y" />
+          <state_interface name="torque.z" />
+          <param name="frame_id">RL_foot</param>
+          <param name="fx_range">100</param>
+          <param name="fy_range">100</param>
+          <param name="fz_range">100</param>
+          <param name="tx_range">15</param>
+          <param name="ty_range">15</param>
+          <param name="tz_range">15</param>
+        </sensor>
+        <sensor name="rr_ft_sensor">
+          <state_interface name="force.x" />
+          <state_interface name="force.y" />
+          <state_interface name="force.z" />
+          <state_interface name="torque.x" />
+          <state_interface name="torque.y" />
+          <state_interface name="torque.z" />
+          <param name="frame_id">RR_foot</param>
+          <param name="fx_range">100</param>
+          <param name="fy_range">100</param>
+          <param name="fz_range">100</param>
+          <param name="tx_range">15</param>
+          <param name="ty_range">15</param>
+          <param name="tz_range">15</param>
+        </sensor>
+    </ros2_control> 
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+</robot>
