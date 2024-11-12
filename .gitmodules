@@ -13,6 +13,3 @@
 [submodule "ocs2_ros2"]
 	path = ocs2_ros2
 	url = https://github.com/legubiao/ocs2_ros2.git
-[submodule "OrbbecSDK_ROS2"]
-	path = OrbbecSDK_ROS2
-	url = https://github.com/orbbec/OrbbecSDK_ROS2.git
