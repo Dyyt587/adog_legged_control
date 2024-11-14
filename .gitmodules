@@ -9,4 +9,4 @@
 	url = https://github.com/Dyyt587/adog_legged_controller
 [submodule "quadruped_ros2_control"]
 	path = quadruped_ros2_control
-	url = https://github.com/legubiao/quadruped_ros2_control.git
+	url = https://github.com/Dyyt587/quadruped_ros2_control.git
