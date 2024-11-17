@@ -137,10 +137,10 @@ ocs2_quadruped_controller:
 
     command_interfaces:
       - effort #for gazebo
-      # - position
-      # - velocity
-      # - kp
-      # - kd
+      - position
+      - velocity
+      - kp
+      - kd
 
     state_interfaces:
       - effort

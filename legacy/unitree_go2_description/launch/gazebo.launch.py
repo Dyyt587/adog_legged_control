@@ -68,7 +68,7 @@ def generate_launch_description():
                           arguments=['-topic','robot_description','-entity', robotXacroName,
                                      '-x', '0',
                                    '-y', '0',
-                                   '-z', '0.35',
+                                   '-z', '0.30',
                                    '-R', '0.0',
                                    '-P', '-0.0',
                                    '-Y', '0'],output='screen')
@@ -227,12 +227,12 @@ def generate_launch_description():
         ))
 
     # # launchDescriptionObject.add_action(joint_state_publisher_gui_node)
-    # launchDescriptionObject.add_action(RegisterEventHandler(
-    #         event_handler=OnProcessExit(
-    #             target_action=ros_control_5,
-    #             on_exit=[rviz_node],
-    #         )
-    #     ))
+    launchDescriptionObject.add_action(RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=ros_control_5,
+                on_exit=[rviz_node],
+            )
+        ))
     
 
     return launchDescriptionObject
