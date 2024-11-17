@@ -82,7 +82,10 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "*.ipp": "cpp",
+        "mixinvector": "cpp",
+        "fast_back_stack": "cpp"
     },
     "cmake.ignoreCMakeListsMissing": true
 }

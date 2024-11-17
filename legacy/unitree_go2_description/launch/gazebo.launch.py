@@ -60,7 +60,7 @@ def generate_launch_description():
                                                                        'launch','gazebo.launch.py'))
     
     # this is the launch description   
-    gazeboLaunch=IncludeLaunchDescription(gazebo_rosPackageLaunch,launch_arguments={'world': pathWorldFile,'verbose': "false",'pause':"true"}.items())
+    gazeboLaunch=IncludeLaunchDescription(gazebo_rosPackageLaunch,launch_arguments={'world': pathWorldFile,'verbose': "false",'pause':"false"}.items())
     #gazeboLaunch=IncludeLaunchDescription(gazebo_rosPackageLaunch)
     
     # here, we create a gazebo_ros Node 
@@ -68,9 +68,9 @@ def generate_launch_description():
                           arguments=['-topic','robot_description','-entity', robotXacroName,
                                      '-x', '0',
                                    '-y', '0',
-                                   '-z', '0.40',
+                                   '-z', '0.35',
                                    '-R', '0.0',
-                                   '-P', '-0.01',
+                                   '-P', '-0.0',
                                    '-Y', '0'],output='screen')
     
     # Robot State Publisher Node
@@ -91,6 +91,10 @@ def generate_launch_description():
    
     ros_control_3 =    ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_effort_controller'],
+        output='screen'
+    )
+    ros_control_pd =    ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'leg_pd_controller'],
         output='screen'
     )
     ros_control_4_1 =    ExecuteProcess(
@@ -204,19 +208,31 @@ def generate_launch_description():
     launchDescriptionObject.add_action(delayed_spawn_robot)
     # launchDescriptionObject.add_action(append_environment)
     launchDescriptionObject.add_action(nodeRobotStatePublisher)
+
     launchDescriptionObject.add_action(ros_control_1)
     launchDescriptionObject.add_action(ros_control_2)
+    launchDescriptionObject.add_action(ros_control_pd)
     #launchDescriptionObject.add_action(ros_control_3)
 
     launchDescriptionObject.add_action(ros_control_4_1)
     launchDescriptionObject.add_action(ros_control_4_2)
     launchDescriptionObject.add_action(ros_control_4_3)
     launchDescriptionObject.add_action(ros_control_4_4)
-    #launchDescriptionObject.add_action(ocs2_controller)
-    launchDescriptionObject.add_action(ros_control_5)
-    
-    # launchDescriptionObject.add_action(joint_state_publisher_gui_node)
-    launchDescriptionObject.add_action(rviz_node)
+    #launchDescriptionObject.add_action(ros_control_5)
+    launchDescriptionObject.add_action(RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=ros_control_pd,
+                on_exit=[ros_control_5],
+            )
+        ))
+
+    # # launchDescriptionObject.add_action(joint_state_publisher_gui_node)
+    # launchDescriptionObject.add_action(RegisterEventHandler(
+    #         event_handler=OnProcessExit(
+    #             target_action=ros_control_5,
+    #             on_exit=[rviz_node],
+    #         )
+    #     ))
     
 
     return launchDescriptionObject
