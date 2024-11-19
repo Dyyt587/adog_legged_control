@@ -25,7 +25,12 @@ namespace ocs2::legged_robot {
         conf.names.reserve(joint_names_.size() * command_interface_types_.size());
         for (const auto &joint_name: joint_names_) {
             for (const auto &interface_type: command_interface_types_) {
-                conf.names.push_back(joint_name + "/" += interface_type);
+                //conf.names.push_back(joint_name + "/" += interface_type);
+                                if (!command_prefix_.empty()) {
+                    conf.names.push_back(command_prefix_ + "/" + joint_name + "/" += interface_type);
+                } else {
+                    conf.names.push_back(joint_name + "/" += interface_type);
+                }
             }
         }
 
@@ -46,9 +51,9 @@ namespace ocs2::legged_robot {
             conf.names.push_back(imu_name_ + "/" += interface_type);
         }
 
-        for (const auto &interface_type: foot_force_interface_types_) {
-            conf.names.push_back(foot_force_name_ + "/" += interface_type);
-        }
+        // for (const auto &interface_type: foot_force_interface_types_) {
+        //     conf.names.push_back(foot_force_name_ + "/" += interface_type);
+        // }
 
         return conf;
     }
@@ -93,20 +98,20 @@ namespace ocs2::legged_robot {
             RCLCPP_ERROR(get_node()->get_logger(), "[Legged Controller] Safety check failed, stopping the controller.");
             for (int i = 0; i < joint_names_.size(); i++) {
                 ctrl_comp_.joint_torque_command_interface_[i].get().set_value(0);
-                // ctrl_comp_.joint_position_command_interface_[i].get().set_value(0);
-                // ctrl_comp_.joint_velocity_command_interface_[i].get().set_value(0);
-                // ctrl_comp_.joint_kp_command_interface_[i].get().set_value(0.0);
-                // ctrl_comp_.joint_kd_command_interface_[i].get().set_value(0.35);
+                ctrl_comp_.joint_position_command_interface_[i].get().set_value(0);
+                ctrl_comp_.joint_velocity_command_interface_[i].get().set_value(0);
+                ctrl_comp_.joint_kp_command_interface_[i].get().set_value(0.0);
+                ctrl_comp_.joint_kd_command_interface_[i].get().set_value(0.35);
             }
             return controller_interface::return_type::ERROR;
         }
 
         for (int i = 0; i < joint_names_.size(); i++) {
             ctrl_comp_.joint_torque_command_interface_[i].get().set_value(torque(i));
-            // ctrl_comp_.joint_position_command_interface_[i].get().set_value(pos_des(i));
-            // ctrl_comp_.joint_velocity_command_interface_[i].get().set_value(vel_des(i));
-            // ctrl_comp_.joint_kp_command_interface_[i].get().set_value(default_kp_);
-            // ctrl_comp_.joint_kd_command_interface_[i].get().set_value(default_kd_);
+            ctrl_comp_.joint_position_command_interface_[i].get().set_value(pos_des(i));
+            ctrl_comp_.joint_velocity_command_interface_[i].get().set_value(vel_des(i));
+            ctrl_comp_.joint_kp_command_interface_[i].get().set_value(default_kp_);
+            ctrl_comp_.joint_kd_command_interface_[i].get().set_value(default_kd_);
         }
 
         // Visualization
@@ -133,6 +138,8 @@ namespace ocs2::legged_robot {
         loadData::loadCppDataType(task_file_, "legged_robot_interface.verbose", verbose_);
 
         // Hardware Parameters
+
+        command_prefix_ = auto_declare<std::string>("command_prefix", command_prefix_);
         joint_names_ = auto_declare<std::vector<std::string> >("joints", joint_names_);
         feet_names_ = auto_declare<std::vector<std::string> >("feet", feet_names_);
         command_interface_types_ =

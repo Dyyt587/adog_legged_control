@@ -72,6 +72,9 @@ namespace ocs2::legged_robot {
                                    const rclcpp::Duration &period);
 
         CtrlComponent ctrl_comp_;
+
+        std::string command_prefix_;
+
         std::vector<std::string> joint_names_;
         std::vector<std::string> feet_names_;
         std::vector<std::string> command_interface_types_;

@@ -25,6 +25,11 @@ from launch.actions import DeclareLaunchArgument, RegisterEventHandler
 from launch.event_handlers import OnProcessExit
 from launch.actions import TimerAction
 
+from launch.substitutions import Command, FindExecutable, PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
+
+
+
 def generate_launch_description():
     
     # this name has to match the robot name in the Xacro file
@@ -40,6 +45,9 @@ def generate_launch_description():
     # this is a relative path to the Gazebo world file
     worldFileRelativePath = 'world/empty_world.world'
     
+
+
+
     # this is the absolute path to the model
     pathModelFile = os.path.join(get_package_share_directory(package_name),modelFileRelativePath)
 
@@ -50,6 +58,13 @@ def generate_launch_description():
     robotDescription = xacro.process_file(pathModelFile).toxml()
 
     pkg_share = os.pathsep + os.path.join(ament_index_python.get_package_prefix(package_name), 'share')
+
+
+    robot_description_content =    ExecuteProcess(
+        cmd=['xacro', pathModelFile, '-o', os.path.join(get_package_share_directory(package_name),'urdf/output.urdf'),],
+        output='screen'
+    )
+
 
     if 'GAZEBO_MODEL_PATH' in os.environ:
         os.environ['GAZEBO_MODEL_PATH'] += pkg_share
@@ -118,36 +133,6 @@ def generate_launch_description():
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'ocs2_quadruped_controller'],
         output='screen'
     )
-    # spawner_script = Node(
-    #     package='controller_manager',
-    #     executable='ros2_control_node',
-    #     arguments=[
-    #         '-p','urdf_file': os.path.join(get_package_share_directory(package_description), 'urdf',
-    #                                               'robot.urdf'),
-    #                     'task_file': os.path.join(get_package_share_directory(package_description), 'config', 'ocs2',
-    #                                               'task.info'),
-    #                     'reference_file': os.path.join(get_package_share_directory(package_description), 'config',
-    #                                                    'ocs2', 'reference.info'),
-    #                     'gait_file': os.path.join(get_package_share_directory(package_description), 'config',
-    #                                               'ocs2', 'gait.info')
-                    
-    #     ],
-    #     output='both')
-    
-    ocs2_controller = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["ocs2_quadruped_controller", "--controller-manager", "/controller_manager",'--ros-args',
-                   os.path.join('urdf_file:=',get_package_share_directory(package_description), 'urdf',
-                                                  'robot.urdf'),
-                        os.path.join('task_file:=',get_package_share_directory(package_description), 'config', 'ocs2',
-                                                  'task.info'),
-                        os.path.join('reference_file:=',get_package_share_directory(package_description), 'config',
-                                                       'ocs2', 'reference.info'),
-                        os.path.join('gait_file:=',get_package_share_directory(package_description), 'config',
-                                                  'ocs2', 'gait.info')
-                    ]
-    )
 
 	# 获取功能包路径（注意，这个路径是在工作空间的install文件夹里
     pkg_description = get_package_share_directory(package_name)
@@ -174,22 +159,9 @@ def generate_launch_description():
         executable="rviz2",
         name="rviz2",
         output="screen",
-        arguments=['-d', rviz_config_path]
+        arguments=['-d', rviz_config_path ]
     )
-    # ExecuteProcess(
-    #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start','joint_state_broadcaster'],
-    #     output='screen'
-    # ),
- 
-    # ExecuteProcess(
-    #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'joint_effort_controller'],
-    #     output='screen'
-    # ),
-    # ExecuteProcess(
-    #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'test_force_torque_sensor_broadcaster'],
-    #     output='screen'
-    # ),
-    # here we create an empty launch description object
+
     delayed_spawn_robot = TimerAction(
         period=2.0,
         actions=[spawnModelNode]
@@ -199,26 +171,21 @@ def generate_launch_description():
     launchDescriptionObject = LaunchDescription()
      
     # we add gazeboLaunch 
+    launchDescriptionObject.add_action(robot_description_content)
     launchDescriptionObject.add_action(gazeboLaunch)
-    #launchDescriptionObject.add_action(spawner_script)
-    
-    #launchDescriptionObject.add_action(delay_robot_after_gazebo)
+     
     
     # we add the two nodes
     launchDescriptionObject.add_action(delayed_spawn_robot)
-    # launchDescriptionObject.add_action(append_environment)
     launchDescriptionObject.add_action(nodeRobotStatePublisher)
 
     launchDescriptionObject.add_action(ros_control_1)
     launchDescriptionObject.add_action(ros_control_2)
     launchDescriptionObject.add_action(ros_control_pd)
-    #launchDescriptionObject.add_action(ros_control_3)
-
     launchDescriptionObject.add_action(ros_control_4_1)
     launchDescriptionObject.add_action(ros_control_4_2)
     launchDescriptionObject.add_action(ros_control_4_3)
     launchDescriptionObject.add_action(ros_control_4_4)
-    #launchDescriptionObject.add_action(ros_control_5)
     launchDescriptionObject.add_action(RegisterEventHandler(
             event_handler=OnProcessExit(
                 target_action=ros_control_pd,
@@ -226,7 +193,6 @@ def generate_launch_description():
             )
         ))
 
-    # # launchDescriptionObject.add_action(joint_state_publisher_gui_node)
     launchDescriptionObject.add_action(RegisterEventHandler(
             event_handler=OnProcessExit(
                 target_action=ros_control_5,
