@@ -12,7 +12,7 @@ model_settings
 
   verboseCppAd                  true
   recompileLibrariesCppAd       false
-  modelFolderCppAd              /home/ubuntu/ocs2_quadruped_controller/go2
+  modelFolderCppAd              /home/dyyt/ocs2_quadruped_controller/go2
 }
 
 swing_trajectory_config

@@ -28,7 +28,7 @@ from launch.actions import TimerAction
 def generate_launch_description():
     
     # this name has to match the robot name in the Xacro file
-    robotXacroName='adog1'
+    robotXacroName='adog'
     
     # this is the name of our package, at the same time this is the name of the 
     # folder that will be used to define the paths
