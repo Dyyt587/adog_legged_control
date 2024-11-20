@@ -43,7 +43,7 @@ def generate_launch_description():
     # this is a relative path to the xacro file defining the model
     modelFileRelativePath = 'xacro/robot.xacro'
     # this is a relative path to the Gazebo world file
-    worldFileRelativePath = 'world/empty_world.world'
+    worldFileRelativePath = 'world/turtlebot3_world.world'
     
 
 
@@ -81,8 +81,8 @@ def generate_launch_description():
     # here, we create a gazebo_ros Node 
     spawnModelNode = Node(package='gazebo_ros', executable='spawn_entity.py',
                           arguments=['-topic','robot_description','-entity', robotXacroName,
-                                     '-x', '0',
-                                   '-y', '0',
+                                     '-x', '0.4',
+                                   '-y', '0.4',
                                    '-z', '0.30',
                                    '-R', '0.0',
                                    '-P', '-0.0',
