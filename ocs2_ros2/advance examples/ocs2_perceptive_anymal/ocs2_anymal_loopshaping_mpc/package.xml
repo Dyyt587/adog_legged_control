@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ocs2_anymal_loopshaping_mpc</name>
+  <version>0.0.0</version>
+  <description>ocs2_anymal_loopshaping_mpc</description>
+
+  <maintainer email="rgrandia@ethz.ch">ruben</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>ocs2_anymal_mpc</depend>
+  <depend>ocs2_quadruped_loopshaping_interface</depend>
+
+  <export>                               
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

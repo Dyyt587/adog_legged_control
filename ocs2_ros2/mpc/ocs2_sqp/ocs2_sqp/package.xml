@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>ocs2_sqp</name>
+    <version>0.0.0</version>
+    <description>The ocs2_hpipm package</description>
+
+    <maintainer email="huier@todo.todo">huier</maintainer>
+
+    <license>TODO</license>
+
+    <buildtool_depend>ament_cmake</buildtool_depend>
+
+    <depend>blasfeo_colcon</depend>
+    <depend>hpipm_colcon</depend>
+    <depend>ocs2_mpc</depend>
+
+    <test_depend>ament_lint_auto</test_depend>
+    <test_depend>ament_lint_common</test_depend>
+
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+
+</package>

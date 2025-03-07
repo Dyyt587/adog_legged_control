@@ -1,0 +1,10 @@
+convex_plane_decomposition_ros_node:
+  ros__parameters:
+    elevation_topic: '/elevation_mapping/elevation_map_raw'
+    height_layer: 'elevation'
+    target_frame_id: 'odom'
+    submap:
+      width: 3.0
+      length: 3.0
+    publish_to_controller: true
+    frequency: 20.0

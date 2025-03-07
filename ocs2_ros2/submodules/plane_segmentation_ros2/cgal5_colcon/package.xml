@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+    <name>cgal5_colcon</name>
+    <version>5.0.2</version>
+    <description>Colcon wrapper for CGAL 5.</description>
+    <maintainer email="rgrandia@ethz.ch">Ruben Grandia</maintainer>
+
+    <license>See package</license>
+
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <build_depend>cmake_modules</build_depend>
+    <build_depend>cmake_clang_tools</build_depend>
+    <exec_depend>libgmp-dev</exec_depend>  <!-- required for the buildserver -->
+    <exec_depend>libmpfr-dev</exec_depend>  <!-- required for the buildserver -->
+
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+</package>

@@ -1,0 +1,6 @@
+# Makes CGAL/find___.cmake available
+list(APPEND CMAKE_MODULE_PATH $ENV{AMENT_PREFIX_PATH}/lib/cmake/CGAL)
+
+# Cpp standard version
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)

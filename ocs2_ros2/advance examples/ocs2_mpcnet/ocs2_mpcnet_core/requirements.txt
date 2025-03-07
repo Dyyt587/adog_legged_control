@@ -1,0 +1,15 @@
+#
+####### requirements.txt #######
+#
+###### Requirements without version specifiers ######
+black
+numpy
+pyyaml
+tensorboard
+torch
+onnx
+#
+###### Requirements with version specifiers ######
+#
+###### Refer to other requirements files ######
+#
