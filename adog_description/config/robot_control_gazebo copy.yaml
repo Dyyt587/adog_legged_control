@@ -1,0 +1,160 @@
+# Controller Manager configuration
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 500  # Hz
+
+#     # Define the available controllers
+
+#     imu_sensor_broadcaster:
+#       type: imu_sensor_broadcaster/IMUSensorBroadcaster
+
+
+#     joint_effort_controller:
+#       type: effort_controllers/JointGroupEffortController
+
+# imu_sensor_broadcaster:
+#   ros__parameters:
+#     sensor_name: "imu_sensor"
+#     frame_id: "imu_link"
+
+# joint_effort_controller:
+#   ros__parameters:
+#     joints:
+#       - FR_hip_joint
+
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 1000  # Hz
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
+ 
+#     joint_effort_controller:
+#       type: effort_controllers/JointGroupEffortController
+
+# joint_effort_controller:
+#   ros__parameters:
+#     joints:
+#       - FL_hip_joint 
+#       - FL_thigh_joint 
+#       - FL_calf_joint 
+ 
+#       - FR_hip_joint
+#       - FR_thigh_joint
+#       - FR_calf_joint
+ 
+#       - RL_hip_joint
+#       - RL_thigh_joint
+#       - RL_calf_joint
+ 
+#       - RR_hip_joint
+#       - RR_thigh_joint
+#       - RR_calf_joint
+
+# Controller Manager configuration
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 500  # Hz
+
+#     # Define the available controllers
+
+#     imu_sensor_broadcaster:
+#       type: imu_sensor_broadcaster/IMUSensorBroadcaster
+
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
+ 
+#     joint_effort_controller:
+#       type: effort_controllers/JointGroupEffortController
+
+# imu_sensor_broadcaster:
+#   ros__parameters:
+#     sensor_name: "imu_sensor"
+#     frame_id: "imu_link"
+
+# joint_effort_controller:
+#   ros__parameters:
+#     joints:
+#       - FR_hip_joint
+
+
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_effort_controller:
+      type: adog_legged_controller/AdogLeggedController
+
+    imu_sensor_broadcaster:
+      type: imu_sensor_broadcaster/IMUSensorBroadcaster
+
+    fl_foot_force_sensor_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+
+    fr_foot_force_sensor_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+
+    rl_foot_force_sensor_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+
+    rr_foot_force_sensor_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+
+    # test_force_torque_sensor_broadcaster:
+    #   ros__parameters:
+    #     type: "force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster"
+    #     frame_id: FL_foot
+    #     sensor_name: ft_sensor
+    #     update_rate: 50
+    #     publish_rate: 50
+fl_foot_force_sensor_broadcaster:
+  ros__parameters:
+    frame_id:  "FL_foot"
+    sensor_name: "fl_ft_sensor"
+
+fr_foot_force_sensor_broadcaster:
+  ros__parameters:
+    frame_id:  "FR_foot"
+    sensor_name: "fr_ft_sensor"
+
+rl_foot_force_sensor_broadcaster:
+  ros__parameters:
+    frame_id:  "RL_foot"
+    sensor_name: "rl_ft_sensor"
+
+rr_foot_force_sensor_broadcaster:
+  ros__parameters:
+    frame_id:  "RR_foot"
+    sensor_name: "rr_ft_sensor"
+
+imu_sensor_broadcaster:
+  ros__parameters:
+    sensor_name: "imu_sensor"
+    frame_id: "imu_link"
+
+joint_effort_controller:
+  ros__parameters:
+    joints:
+      - FL_hip_joint 
+      - FL_thigh_joint 
+      - FL_calf_joint 
+ 
+      - FR_hip_joint
+      - FR_thigh_joint
+      - FR_calf_joint
+ 
+      - RL_hip_joint
+      - RL_thigh_joint
+      - RL_calf_joint
+ 
+      - RR_hip_joint
+      - RR_thigh_joint
+      - RR_calf_joint
+    interface_name:
+      - effort
+
+
+    
+    

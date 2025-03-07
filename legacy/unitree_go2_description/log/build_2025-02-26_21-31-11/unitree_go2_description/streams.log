@@ -1,0 +1,67 @@
+[0.015s] Invoking command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dyyt/unitree_go2_description/build/unitree_go2_description -- -j16 -l16
+[0.053s] Invoked command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dyyt/unitree_go2_description/build/unitree_go2_description -- -j16 -l16
+[0.094s] Invoking command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dyyt/unitree_go2_description/build/unitree_go2_description
+[0.100s] -- Install configuration: ""
+[0.100s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/thigh.dae
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/wheel_Link.STL
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/calf.dae
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/trunk.dae
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/foot.dae
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/base_link.STL
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/calf_mirror.dae
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/link3.STL
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/link2.STL
+[0.101s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/thigh_mirror.dae
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/link1.STL
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/hip.dae
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/gazebo.xacro
+[0.102s] -- Installing: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/leg.xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/materials.xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/ros2_control copy.xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/robot.xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/const.xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/ros2_control.xacro
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/hw.launch copy.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/visualize.launch.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/unitree_guide.launch.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/gazebo.launch copy.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/hw.launch.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/gazebo.launch.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/test_joint_trajectory_controller.launch.py
+[0.102s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/robot_control_gazebo.yaml
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/joint_trajectory_publisher.yaml
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/robot_control_gazebo copy.yaml
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2/task.info
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2/reference.info
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2/gait.info
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/visualize_urdf.rviz
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/gazebo.rviz
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/robot_control.yaml
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/joint_trajectory_publisher copy.yaml
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//world
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//world/wall.world
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//world/empty_world.world
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//urdf
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//urdf/robot.urdf
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//urdf/leg.urdf
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/ament_index/resource_index/package_run_dependencies/unitree_go2_description
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/ament_index/resource_index/parent_prefix_path/unitree_go2_description
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/ament_prefix_path.sh
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/ament_prefix_path.dsv
+[0.103s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/path.sh
+[0.104s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/path.dsv
+[0.104s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.bash
+[0.104s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.sh
+[0.104s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.zsh
+[0.104s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.dsv
+[0.104s] -- Installing: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/package.dsv
+[0.105s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/ament_index/resource_index/packages/unitree_go2_description
+[0.105s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/cmake/unitree_go2_descriptionConfig.cmake
+[0.105s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/cmake/unitree_go2_descriptionConfig-version.cmake
+[0.105s] -- Up-to-date: /home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/package.xml
+[0.105s] Invoked command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dyyt/unitree_go2_description/build/unitree_go2_description

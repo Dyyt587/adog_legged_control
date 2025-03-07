@@ -14,7 +14,8 @@
     <xacro:include filename="$(find unitree_go2_description)/xacro/materials.xacro"/>
     <xacro:include filename="$(find unitree_go2_description)/xacro/leg.xacro"/>
     <xacro:include filename="$(find unitree_go2_description)/xacro/ros2_control.xacro"/>
-    <xacro:include filename="$(find unitree_go2_description)/xacro/gazebo.xacro"/>
+    <!-- 开启gazebo仿真 -->
+    <!-- <xacro:include filename="$(find unitree_go2_description)/xacro/gazebo.xacro"/> -->
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
 
@@ -45,11 +46,11 @@
         <child link="trunk"/>
     </joint>
 
-
-    <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+    <!-- gazebo专用 -->
+    <!-- <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
     <xacro:VLP-16 parent="trunk" name="rslidar" topic="/rslidar_points" organize_cloud="${organize_cloud}" hz="10" samples="440" gpu="${gpu}">
       <origin xyz="0.2 0 0.08" rpy="0 0 0" />
-    </xacro:VLP-16>
+    </xacro:VLP-16> -->
 
     <link name="camera_link">
 
@@ -68,20 +69,20 @@
     <parent link="camera_link"/>
     <child link="camera_link_fake"/>
   </joint>
-<!-- <xacro:include filename="$(find realsense_ros2_gazebo)/xacro/depthcam.xacro"/>
 
-<xacro:realsense_R200 sensor_name="camera" parent_link="trunk" rate="30.0">
-  <origin rpy="0 0 0" xyz="0 0 0.5"/>
-</xacro:realsense_R200>
-  -->
+    <!-- <xacro:include filename="$(find realsense_ros2_gazebo)/xacro/depthcam.xacro"/>
+
+    <xacro:realsense_R200 sensor_name="camera" parent_link="trunk" rate="30.0">
+    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+    </xacro:realsense_R200> -->
  
-
-
+ 
     <link name="trunk">
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="file://$(find unitree_go2_description)/meshes/trunk.dae" scale="1 1 1"/>
+                <!-- <mesh filename="file://$(find unitree_go2_description)/meshes/trunk.dae" scale="1 1 1"/> -->
+                <box size="${trunk_length} ${trunk_width} ${trunk_height}"/>
             </geometry>
             <material name="orange"/>
         </visual>

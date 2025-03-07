@@ -1,0 +1,9 @@
+<library path="adog_leg_hardware">
+  <class name="adog_leg_hardware/LegSystemHardware"
+         type="adog_leg_hardware::LegSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Robot System for adog quadruped robot.
+    </description>
+  </class>
+</library>

@@ -1,0 +1,4 @@
+Invoking command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dyyt/unitree_go2_description/build/unitree_go2_description -- -j16 -l16
+Invoked command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dyyt/unitree_go2_description/build/unitree_go2_description -- -j16 -l16
+Invoking command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dyyt/unitree_go2_description/build/unitree_go2_description
+Invoked command in '/home/dyyt/unitree_go2_description/build/unitree_go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dyyt/unitree_go2_description/build/unitree_go2_description

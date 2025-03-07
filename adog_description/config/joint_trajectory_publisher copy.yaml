@@ -1,0 +1,46 @@
+publisher_joint_trajectory_controller:
+  ros__parameters:
+
+    controller_name: "joint_trajectory_position_controller"
+    wait_sec_between_publish: 6
+
+    goal_names: ["pos1", "pos2", "pos3", "pos4"]
+    pos1:
+      positions: [0.0,0.0,0.0,0.0 ,0.0,0.0,0.0,0.0, 0.0,0.0,0.0,0.0]
+    pos2:
+      positions: [0.5,0.5,0.5,0.5 ,0.0,0.0,0.0,0.0, 0.0,0.0,0.0,0.0]
+    pos3:
+      positions: [0.0,0.0,0.0,0.0 ,0.0,0.0,0.0,0.0, 0.0,0.0,0.0,0.0]
+    pos4:
+      positions: [0.5,0.5,0.5,0.5 ,0.0,0.0,0.0,0.0, 0.0,0.0,0.0,0.0]
+
+    joints:
+      - LF_joint1 
+      - LB_joint1 
+      - RF_joint1 
+      - RB_joint1 
+      - LF_joint2 
+      - LB_joint2 
+      - RF_joint2 
+      - RB_joint2 
+      - LF_joint3 
+      - LB_joint3 
+      - RF_joint3 
+      - RB_joint3 
+
+    check_starting_point: false
+    starting_point_limits:
+      LF_joint1: [-0.1,0.1]
+      LB_joint1: [-0.1,0.1]
+      RF_joint1: [-0.1,0.1]
+      RB_joint1: [-0.1,0.1]
+      LF_joint2: [-0.1,0.1]
+      LB_joint2: [-0.1,0.1]
+      RF_joint2: [-0.1,0.1]
+      RB_joint2: [-0.1,0.1]
+      LF_joint3: [-0.1,0.1]
+      LB_joint3: [-0.1,0.1]
+      RF_joint3: [-0.1,0.1]
+      RB_joint3: [-0.1,0.1]
+
+

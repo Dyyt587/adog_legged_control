@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-    <xacro:arg name="IS_USING_GAZEBO" default="true"/>
+    <xacro:arg name="IS_USING_GAZEBO" default="false"/>
 
     <xacro:macro name="joint_interface" params="name">
         <joint name="${name}">
@@ -56,8 +56,16 @@
             <state_interface name="linear_acceleration.y"/>
             <state_interface name="linear_acceleration.z"/>
         </sensor>
+        <sensor name="foot_force">
+          <state_interface name="FL" />
+          <state_interface name="RL" />
+          <state_interface name="FR" />
+          <state_interface name="RR" />
+          <!-- <state_interface name="torque.y" />
+          <state_interface name="torque.z" /> -->
+        </sensor>
 
-        <sensor name="fl_ft_sensor">
+        <!-- <sensor name="fl_ft_sensor">
           <state_interface name="force.x" />
           <state_interface name="force.y" />
           <state_interface name="force.z" />
@@ -116,17 +124,9 @@
           <param name="tx_range">15</param>
           <param name="ty_range">15</param>
           <param name="tz_range">15</param>
-        </sensor>
+        </sensor> -->
     </ros2_control> 
 
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         

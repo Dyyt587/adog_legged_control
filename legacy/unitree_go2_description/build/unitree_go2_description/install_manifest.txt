@@ -1,0 +1,55 @@
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/thigh.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/wheel_Link.STL
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/calf.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/trunk.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/foot.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/base_link.STL
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/calf_mirror.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/link3.STL
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/link2.STL
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/thigh_mirror.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/link1.STL
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//meshes/hip.dae
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/gazebo.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/leg.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/materials.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/ros2_control copy.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/robot.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/const.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//xacro/ros2_control.xacro
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/hw.launch copy.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/visualize.launch.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/unitree_guide.launch.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/gazebo.launch copy.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/hw.launch.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/gazebo.launch.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//launch/test_joint_trajectory_controller.launch.py
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/robot_control_gazebo.yaml
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/joint_trajectory_publisher.yaml
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/robot_control_gazebo copy.yaml
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2/task.info
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2/reference.info
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/ocs2/gait.info
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/visualize_urdf.rviz
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/gazebo.rviz
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/robot_control.yaml
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//config/joint_trajectory_publisher copy.yaml
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//world/wall.world
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//world/empty_world.world
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//urdf/robot.urdf
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description//urdf/leg.urdf
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/ament_index/resource_index/package_run_dependencies/unitree_go2_description
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/ament_index/resource_index/parent_prefix_path/unitree_go2_description
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/ament_prefix_path.sh
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/ament_prefix_path.dsv
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/path.sh
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/environment/path.dsv
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.bash
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.sh
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.zsh
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/local_setup.dsv
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/package.dsv
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/ament_index/resource_index/packages/unitree_go2_description
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/cmake/unitree_go2_descriptionConfig.cmake
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/cmake/unitree_go2_descriptionConfig-version.cmake
+/home/dyyt/unitree_go2_description/install/unitree_go2_description/share/unitree_go2_description/package.xml

@@ -4,7 +4,7 @@ project(unitree_go2_description)
 find_package(ament_cmake REQUIRED)
 
 install(
-		DIRECTORY meshes xacro launch config world
+		DIRECTORY meshes xacro launch config world urdf
 		DESTINATION share/${PROJECT_NAME}/
 )
 

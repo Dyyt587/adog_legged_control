@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="unitree_go2_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00010002215029517 0.0228448738643802 -6.11672235752876E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.357167923727304" />
+      <inertia
+        ixx="0.000212416122465016"
+        ixy="5.78512702265709E-08"
+        ixz="4.59327733116839E-07"
+        iyy="0.000392114500575741"
+        iyz="4.49259695189825E-08"
+        izz="0.000205317241420605" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://unitree_go2_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1">
+    <inertial>
+      <origin
+        xyz="0.001129306904799 -0.00947462257226582 9.13596840195884E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.947300452289663" />
+      <inertia
+        ixx="0.00111873490293246"
+        ixy="7.30359509003439E-05"
+        ixz="-1.43873297155965E-06"
+        iyy="0.00078517979424524"
+        iyz="-3.12987663790632E-07"
+        izz="0.000763322376827525" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.1 0 0"
+      rpy="0 0 -1.57" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.00225552724365171 3.33066907387547E-16 -0.0343737320927807"
+        rpy="0 0 0" />
+      <mass
+        value="0.196599057823009" />
+      <inertia
+        ixx="0.000497085195710565"
+        ixy="-2.75800059548838E-21"
+        ixz="7.07440941991447E-08"
+        iyy="0.000426570338400366"
+        iyz="-2.09240339801704E-19"
+        izz="7.53875379023833E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.0687 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.0007382591358602 -0.00020634074808757 -0.0548632970684372"
+        rpy="0 0 0" />
+      <mass
+        value="0.0852846487060872" />
+      <inertia
+        ixx="0.000185708796333184"
+        ixy="-1.56013163246759E-21"
+        ixz="-9.2031119395315E-20"
+        iyy="0.000175984739211195"
+        iyz="-6.19895753218719E-07"
+        izz="1.03591802710776E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.15"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_Link">
+    <inertial>
+      <origin
+        xyz="-8.53074253098982E-05 -4.03425466557333E-05 0.00201469560087997"
+        rpy="0 0 0" />
+      <mass
+        value="0.0234148879496474" />
+      <inertia
+        ixx="8.42342982428427E-06"
+        ixy="-1.65897836407293E-10"
+        ixz="-4.10249837556976E-08"
+        iyy="5.84430302598586E-06"
+        iyz="-1.05128125342384E-08"
+        izz="3.18170876581522E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://unitree_go2_description/meshes/wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0005436 -0.15"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="wheel_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
