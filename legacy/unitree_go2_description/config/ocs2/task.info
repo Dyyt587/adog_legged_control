@@ -17,9 +17,9 @@ model_settings
 ;摆动轨迹配置
 swing_trajectory_config
 {
-  liftOffVelocity               0.03  ;离开地面时的速度                                  0.07
-  touchDownVelocity            -0.1   ;着地的速度                                      -0.2
-  swingHeight                   0.02  ;抬腿最大高度                                    0.08      
+  liftOffVelocity               0.07  ;离开地面时的速度                                  0.07
+  touchDownVelocity            -0.2   ;着地的速度                                      -0.2
+  swingHeight                   0.08  ;抬腿最大高度                                    0.08      
   swingTimeScale                0.15  ;摆动时间缩放因子，小：摆动过程更快，大：摆动过程更慢  0.15
 }
 

@@ -70,7 +70,7 @@ imu_sensor_broadcaster:
 
 ocs2_quadruped_controller:
   ros__parameters:
-    update_rate: 1000  # Hz
+    update_rate: 100  # Hz
     command_prefix: ""
 
     # urdf_file: "/home/dyyt/adog_legged_control/install/go2_description/share/go2_description/urdf/robot.urdf"

@@ -545,9 +545,7 @@
       <inertia ixx="0.00108" ixy="3.4e-07" ixz="1.72e-05" iyy="0.0011" iyz="8.28e-06" izz="3.29e-05"/>
     </inertial>
   </link>
-  <joint name="FL_foot_fixed" type="fixed">
-    0
-            
+  <joint name="FL_foot_fixed" type="fixed">    
     <origin rpy="0 0 0" xyz="0 0 -0.15"/>
     <parent link="FL_calf"/>
     <child link="FL_foot"/>
